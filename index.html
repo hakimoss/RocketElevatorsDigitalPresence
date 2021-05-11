@@ -10,11 +10,14 @@
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
+		<link rel="icon" href="./assets/image/icon-page.png">
+
 		<!-- WEB FONTS : use %7C instead of | (pipe) -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
 
 		<!-- REVOLUTION SLIDER -->
 		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
@@ -129,6 +132,7 @@
 											 <ul class="dropdown-menu bg-white" style="border: none;">
 											   <li><a class="dropdown-item" href="./residential.html" style="color: black;" >RESIDENTIAL</a></li>
 											   <li><a class="dropdown-item" href="./commercial.html" style="color: black;" >COMMERCIAL</a></li>
+											   <li><a class="dropdown-item" href="./quote.html" style="color: black;" >GET QUOTE</a></li>
 											 </ul>
 										 </li>
 										<li><!-- PORTFOLIO -->
@@ -255,7 +259,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto; margin-left: 23.5%;">
-									<a class="btn btn-blue btn-lg" href="#contact">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="growHover btn btn-blue btn-lg" href="#contact">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 
 							<div class="tp-caption sfb tp-resizeme"
@@ -270,7 +274,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap; margin-left: 23.5%;">
-									<a class="btn btn-blue btn-lg" href="./quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="growHover btn btn-blue btn-lg" href="./quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
 							
@@ -325,7 +329,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto;">
-									<a class="btn btn-blue btn-lg" href="./residential.html">RESIDENTIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="growHover btn btn-blue btn-lg" href="./residential.html">RESIDENTIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 						</li>
 
@@ -378,7 +382,7 @@
 								data-endelementdelay="0.1"
 								data-endspeed="500"
 								style="z-index: 4; max-width: auto;">
-									<a class="btn btn-blue btn-lg" href="./commercial.html">COMMERCIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="growHover btn btn-blue btn-lg" href="./commercial.html">COMMERCIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
 							</div>
 
 							
@@ -423,7 +427,7 @@
 
 							<h3 class="mt-10">Our Projects and Awards</h3>
 							<p>Come and take a look at the many projects carried out by a talented and passionate team.</p>
-							<a href="#portfolio" class="btn btn-blue">TAKE A LOOK</a>
+							<a href="#portfolio" class="growHover btn btn-blue">TAKE A LOOK</a>
 						</div>
 
 						<div class="col-sm-4">
@@ -435,7 +439,7 @@
 							</a>
 							<h3 class="mt-10">Residential Services</h3>
 							<p>You will find here many solutions to overcome the several restrictions for residential elevator.</p>
-							<a href="./residential.html" class="btn btn-blue">READ MORE</a>
+							<a href="./residential.html" class="growHover btn btn-blue">READ MORE</a>
 						</div>
 
 						<div class="col-sm-4">
@@ -447,7 +451,7 @@
 							</a>
 							<h3 class="mt-10">Commercial Service</h3>
 							<p>Take an interest in the numerous business solutions linked to commercial elevators and learn how to make the most of them.</p>
-							<a href="./commercial.html" class="btn btn-blue">READ MORE</a>
+							<a href="./commercial.html" class="growHover btn btn-blue">READ MORE</a>
 						</div>
 
 					</div>
@@ -470,8 +474,9 @@
 						
 							<div class="containerr">
 								<div class="col-md-12 text-center">
-									<a class="btn btn-red btn-lg" href="#contact">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
-									<a class="btn btn-red btn-lg" href="./quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
+									
+									<a class="colorHover btn btn-red btn-lg" href="#contact">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+									<a class="colorHover btn btn-red btn-lg" href="./quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 								</div>
 								
 										
@@ -1084,62 +1089,98 @@
 
 					<ul class="row clients-dotted list-inline">
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="http://www.ascent-corp.com/Home/Default.aspx">
+							<a class="image-hover" target="_blank" href="http://www.ascent-corp.com/Home/Default.aspx">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									ASCENT-CORP
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo1.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://www.alarm.com/nz/safesecure?home=1">
+							<a class="image-hover" target="_blank" href="https://www.alarm.com/nz/safesecure?home=1">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									SMARTLY ALARM
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo2.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://www.bestiso.org/">
+							<a class="image-hover" target="_blank" href="https://www.bestiso.org/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									BEST-ISO
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo3.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://www.corporateonline.gov.bc.ca/">
+							<a class="image-hover" target="_blank" href="https://www.corporateonline.gov.bc.ca/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									CORPORATE-ONLINE
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo4.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://www.intel.ca/">
+							<a class="image-hover" target="_blank" href="https://www.intel.ca/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									INTEL
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo5.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://www.rolex.com/">
+							<a class="image-hover" target="_blank" href="https://www.rolex.com/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									ROLEX
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo6.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://mobilunity.com/">
+							<a class="image-hover" target="_blank" href="https://mobilunity.com/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									MOBIL UNITY
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo7.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://www.microsoft.com/en-ca/">
+							<a class="image-hover" target="_blank" href="https://www.microsoft.com/en-ca/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									MICROSOFT
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo8.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://www.mitsubishi-motors.ca/en/">
+							<a class="image-hover" target="_blank" href="https://www.mitsubishi-motors.ca/en/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									MITSUBISHI MOTORS
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo9.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://nhm.org/">
+							<a class="image-hover" target="_blank" href="https://nhm.org/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									NATURAL HISTORY MUSEAUM
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo10.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://fulltiltlogistics.com/what-is-a-logistics-company/">
+							<a class="image-hover" target="_blank" href="https://fulltiltlogistics.com/what-is-a-logistics-company/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									FULL TILT LOGISTICS
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo11.jpg" alt="client" />
 							</a>
 						</li>
 						<li class="col-md-3 col-sm-3 col-6">
-							<a target="_blank" href="https://www.desjardins.com/">
+							<a class="image-hover" target="_blank" href="https://www.desjardins.com/">
+								<span style="display: flex; justify-content: center; align-items: center; color: white; top: 100px;" class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
+									DESJARDINS
+								</span>
 								<img class="img-fluid" src="./assets/image/logo/logo12.jpg" alt="client" />
 							</a>
 						</li>
@@ -1283,7 +1324,7 @@
 
 								<div class="row">
 									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+										<button type="submit" class="growHover btn btn-blue"><i class="fa fa-check"></i> SEND MESSAGE</button>
 									</div>
 								</div>
 							</form>
@@ -1366,7 +1407,7 @@
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
 									<span class="input-group-btn">
-										<button class="btn btn-blue" type="submit">Subscribe</button>
+										<button class="growHover btn btn-blue" type="submit">Subscribe</button>
 									</span>
 								</div>
 							</form>
