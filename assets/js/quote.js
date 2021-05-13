@@ -1,4 +1,10 @@
 
+fetch('https://rocket-elevator-calcule.herokuapp.com/')
+	.then(res => res.json())
+	.then(data => console.log(data))
+
+
+
 //hide/show FORM
 
 $(document).ready(function () {
@@ -17,9 +23,6 @@ $(document).ready(function () {
 //hide/show FORM
 
 
-
-
-
 $(document).ready(function() {
 	$("#building-type").change(function() {
 		var selectedOption = $("#building-type option:selected").val()
@@ -31,17 +34,26 @@ $(document).ready(function() {
 
 				var residentialApp = $("#residentialApp").val()
 				var residentialFloor = $("#residentialFloor").val()
-				var residentialBasement = $("#residentialBasement").val()
+				var resColumn = 1;
+				
 
-				var resultResidential = residentialApp / (residentialFloor - residentialBasement)
+				var averageResidential = residentialApp / residentialFloor
 
-				var residentialMultiply = 1;
+				var resCage = (averageResidential  / 6) + 1 ;
+
 
 				if (residentialFloor >= 20){
-					residentialMultiply = residentialFloor / 20 + 1
-					console.log(residentialMultiply)	
-				}
-				$("#elevatorShafts").text(Math.round((resultResidential / 6) * residentialMultiply) / 1 );
+				
+					if (residentialFloor % 20 === 0 ) {
+						resColumn = residentialFloor / 20
+					} else {
+						resColumn = Math.trunc(residentialFloor / 20)  + 1
+					}
+
+				}	
+				 
+				
+				$("#elevatorShafts").text(Math.round(Math.trunc(resCage) * resColumn));
 			});
 		}
 
@@ -50,7 +62,6 @@ $(document).ready(function() {
 				var resultCommercial = $("#commercialElevator").val()
 				$("#elevatorShafts").text(resultCommercial);
 			  });
-			console.log('commercial marche')
 		}
 
 		if (selectedOption === 'corporate') {
@@ -59,15 +70,14 @@ $(document).ready(function() {
 				var corporateFloor = $("#corporateFloor").val();
 				var corporateBasements = $("#corporateBasements").val();
 
-				var totalOccupancy = corporateMaxOccupancy * (corporateFloor + corporateBasements);
+				var totalOccupancy = corporateMaxOccupancy * (parseInt(corporateFloor) + parseInt(corporateBasements));
 				var elevator = totalOccupancy / 1000;
-				var shaft = (corporateFloor + corporateBasements) / 20;
-				var averageShaft = elevator / shaft
-				var resultCommercial = averageShaft * shaft
+				var shaft = (parseInt(corporateFloor) + parseInt(corporateBasements)) / 20;
+				var averageShaft = elevator / Math.round(shaft)
+				var resultCorporate = Math.round(averageShaft) * Math.round(shaft)
 
-				$("#elevatorShafts").text(resultCommercial);
+				$("#elevatorShafts").text(Math.round(resultCorporate));
 			  });
-			console.log('corporate marche')
 		}
 
 		if (selectedOption === 'hybrid') {
@@ -76,15 +86,14 @@ $(document).ready(function() {
 				var hybridFloor = $("#hybridFloor").val();
 				var hybridBasements = $("#hybridBasements").val();
 
-				var totalOccupancy = hybridMaxOccupancy * (hybridFloor + hybridBasements);
-				var elevator = totalOccupancy / 1000;
-				var shaft = (hybridFloor + hybridBasements) / 20;
-				var averageShaft = elevator / shaft
-				var resultCommercial = averageShaft * shaft
-				
-				$("#elevatorShafts").text(resultCommercial);
+				var totalOccupancy = hybridMaxOccupancy * (parseInt(hybridFloor) + parseInt(hybridBasements));
+				var hybridElevator = totalOccupancy / 1000;
+				var hybridShaft = (parseInt(hybridFloor) + parseInt(hybridBasements)) / 20;
+				var averageShaft = hybridElevator / Math.round(hybridShaft)
+				var resultHybrid = Math.round(averageShaft) * Math.round(hybridShaft)
+
+				$("#elevatorShafts").text(Math.round(resultHybrid));
 			  });
-			console.log('hybrid marche')
 		}
 		
 	})
@@ -151,7 +160,3 @@ $(document).ready(function() {
 
 
 })
-
-
-
-
