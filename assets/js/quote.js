@@ -45,7 +45,7 @@ $(document).ready(function() {
 			
 				 var finalRes = Math.round(Math.trunc(resCage) * resColumn)
 				
-				 if (finalRes === Infinity || NaN){
+				 if (finalRes === Infinity){
 					 finalRes = 0
 				 }
 			
@@ -68,7 +68,7 @@ $(document).ready(function() {
 //						CORPORATE	
 
 		if (selectedOption === 'corporate') {
-			$("#corporate").change(function(){
+			$(".corporateChanger").change(function(){
 				var corporateMaxOccupancy = $("#corporateOccupancy").val();
 				var corporateFloor = $("#corporateFloor").val();
 				var corporateBasements = $("#corporateBasements").val();
@@ -79,6 +79,7 @@ $(document).ready(function() {
 				var averageShaft = elevator / Math.round(shaft)
 				var resultCorporate = Math.round(averageShaft) * Math.round(shaft)
 
+
 				$("#elevatorShafts").text(Math.round(resultCorporate));
 			  });
 		}
@@ -87,7 +88,7 @@ $(document).ready(function() {
 //						HYBRID	
 
 		if (selectedOption === 'hybrid') {
-			$("#hybrid").change(function(){
+			$(".hybridChanger").change(function(){
 				var hybridMaxOccupancy = $("#hybridOccupancy").val();
 				var hybridFloor = $("#hybridFloor").val();
 				var hybridBasements = $("#hybridBasements").val();
