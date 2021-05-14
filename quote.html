@@ -226,8 +226,11 @@
 							</div><!-- /Alert Mandatory -->
 
 
+
 							
-							<form action="/quote.js" method="post" enctype="multipart/form-data">
+							<!-- FORM QUOTE -->
+							
+							<form action="/quote" method="post" enctype="multipart/form-data">
 								<fieldset>
 									<input type="hidden" name="action" value="contact_send" />
 
@@ -244,6 +247,7 @@
 										</div>
 									</div>
 
+							<!-- FORM RESIDENTIAL -->
 									<div id="residential" class="building_type row" >
 
 											<div id="number-of-apartments" class="col-md-4">
@@ -259,6 +263,9 @@
 												<input required type="number" value="" class="form-control" name="residentialCalc[resBasement]" id="residentialBasement" min="0">
 											</div>
 									 </div>
+							<!-- FORM RESIDENTIAL -->	
+							
+							<!-- FORM COMMERCIAL -->
 									<div id="commercial" class="building_type" >
 										<div class="row">
 
@@ -286,6 +293,9 @@
 											</div>
 										</div>
 									 </div>
+							<!-- FORM COMMERCIAL -->
+
+							<!-- FORM CORPORATE -->
 									<div id="corporate" class="building_type" >
 										<div class="row">
 
@@ -313,6 +323,9 @@
 											</div>
 										</div>
 									 </div>
+							<!-- FORM CORPORATE -->
+							
+							<!-- FORM HYBRID -->
 									<div id="hybrid" class="building_type" >
 										<div class="row">
 
@@ -345,7 +358,9 @@
 										</div>
 									 </div>
 								</fieldset>
+							<!-- FORM HYBRID -->
 
+							<!-- FORM RADIO BUTTON -->
 
 									<div style="margin-top: 50px;" class="priceShow">
 										Number of elevator shafts required : <span id="elevatorShafts">0</span>
@@ -367,7 +382,9 @@
 										<input type="radio" id="excelium" name="variety" value="excelium">
 									</div>
 								</div>
+							<!-- FORM RADIO BUTTON -->
 
+							<!-- FORM RADIO VALUE -->
 
 								<div class="row" style="margin-top: 130px;">
 									<div id="elevator-amount" class="col-md-4" style="display: flex; flex-direction: column; align-items: center;">
@@ -397,10 +414,10 @@
 								
 							</form>
 						</div>
-
+							<!-- FORM RADIO VALUE -->
 					
 
-						<!-- /FORM -->
+						<!-- FORM QUOTE -->
 
 			<!-- FOOTER -->
 			<footer id="footer">
